@@ -24,6 +24,8 @@ export function next(state) {
   const entries = state.get('entries').concat(getWinners(state.get('vote')));
 
     if (entries.size === 1) {
+      // Build the final state from the existing state rather than creating an
+      // entirely new state object from scratch
       return state.remove('vote')
                   .remove('entries')
                   .set('winner', entries.first());
