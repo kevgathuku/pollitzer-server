@@ -1,0 +1,8 @@
+{
+  "name": "pollitzer",
+  "version": "1.0.0",
+  "description": "Live polling app",
+  "main": "index.js",
+  "author": "Kevin Ndung'u",
+  "license": "MIT"
+}
