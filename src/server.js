@@ -11,5 +11,8 @@ export default function startServer(store) {
   // Send clients the current state when they connect
   io.on('connection', (socket) => {
     socket.emit('state', store.getState().toJS());
+    // TODO: Research this
+    // dispatch 'action' events sent by the clients
+    socket.on('action', store.dispatch.bind(store));
   });
 }
